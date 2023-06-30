@@ -47,6 +47,9 @@ const App = () => {
     console.log("Fetching data for page", currentPage);
   }, [currentPage]);
 
+  const wardList = ["ward 01", "ward 02", "ward 03", "ward 04", "ward 05", "ward 06", "ward 07", "ward 08", "ward 09"];
+  const bloodGroupList = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"];
+
   return (
     <section className="layout__01">
       <div className="container">
@@ -54,28 +57,17 @@ const App = () => {
           <div className="input__box">
             <select value={selectedWard} onChange={handleWardChange}>
               <option> - Select Ward -</option>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
+              {wardList.map((item, index) => {
+                return <option key={index}>{item}</option>;
+              })}
             </select>
           </div>
           <div className="input__box">
             <select value={selectedBloodGroup} onChange={handleBloodGroupChange}>
               <option> - Blood Group -</option>
-              <option>O-</option>
-              <option>O+</option>
-              <option>A-</option>
-              <option>B-</option>
-              <option>AB-</option>
-              <option>AB+</option>
-              <option>A+</option>
-              <option>B+</option>
+              {bloodGroupList.map((item, index) => {
+                return <option key={index}>{item}</option>;
+              })}
             </select>
           </div>
           <div className="input__box">
