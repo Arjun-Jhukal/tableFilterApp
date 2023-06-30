@@ -1,0 +1,42 @@
+.layout__01 {
+  padding: 80px 0;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    select {
+      padding: 10px 20px;
+
+      &:focus {
+        outline: 1px solid blue;
+      }
+    }
+  }
+
+  table {
+    border: 1px solid #ddd;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      button {
+        border: 1px solid #ddd;
+        outline: none;
+        padding: 8px 15px;
+        background-color: transparent;
+
+        &.active {
+          background-color: blue;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
